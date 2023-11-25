@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets\Styles\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Contact</title>
 </head>
 <body>
+    <div class="topnav">
+        <a href="#home" class="active">Contact</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="index.html">Home</a><br>
+            <a href="about.html">About</a><br>
+            <a href="contact.html">Contact</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
     <div class="main">
     <h1><form id="contact_form" action="#" method="POST" enctype="application/x-www-form-urlencoded">
         <div class="row">
@@ -17,7 +32,9 @@
         <div class="row">
             <label class="required" for="email">Your email:</label><br />
             <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
-            <span id="email_validation" class="error_message"></span>
+            <span id="email_validation" class="error_message">
+                Please enter a valid email address.
+            </span>
         </div>
         <div class="row">
             <label class="required" for="message">Your message:</label><br />
@@ -28,5 +45,8 @@
         <input id="submit_button" type="submit" value="Send email" />
     </form></h1>
     </div>
+
+    <script src="global.js"></script>
+    <script src="contact.js"></script>
 </body>
 </html>
