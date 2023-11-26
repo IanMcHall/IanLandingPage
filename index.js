@@ -1,4 +1,3 @@
-
 const ian = {
   firstName: "Ian",
   lastName: "Hall",
@@ -17,19 +16,18 @@ window.onload = function () {
 };
 
 function fetchQuote() {
-  const url = "https://zenquotes.io/api/today";
 
-  fetch(url)
+  fetch("https://type.fit/api/quotes")
     .then((response) => response.json())
-    .then((data) => {
-      displayQuote(data);
-    })
+    .then((data) => displayQuote(data))
     .catch((error) => {
       console.error("Error fetching programming quote:", error);
     });
 }
 
-function displayProgrammingQuote(data) {
-  document.getElementById("api_quote").innerText =
-    data.en + "\n- " + data.author;
+function displayQuote(data) {
+  console.log(data);
+  document.getElementById(
+    "api_quote"
+  ).innerText = `${data[0].text} -Thomas Edison`;
 }
