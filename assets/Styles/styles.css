@@ -27,6 +27,7 @@ p{
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-family: sans-serif;
 }
 
 img{
@@ -34,8 +35,11 @@ img{
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: auto;
-    width: auto;
+    width: 50%;
 }
 
  /* Style the navigation menu */
