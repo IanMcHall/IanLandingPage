@@ -29,5 +29,5 @@ function displayQuote(data) {
   console.log(data);
   document.getElementById(
     "api_quote"
-  ).innerText = `${data[0].text} -Thomas Edison`;
+  ).innerText = `"${data[6].text}" -Carl Sandburg`;
 }
